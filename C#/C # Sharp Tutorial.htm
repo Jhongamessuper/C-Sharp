@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light" lang="pt-br" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="false" data-target="docs" x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="Tutorial: Criar um aplicativo de console C# simples  - Visual Studio (Windows)" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.microsoft.com/pt-br/visualstudio/get-started/csharp/tutorial-console" />
+			<meta property="og:description" content="Saiba como criar aplicativos de console em C# do Visual Basic no Visual Studio, passo a passo." />
+		<meta property="og:image" content="https://docs.microsoft.com/en-us/media/logos/logo-ms-social.png" />
+		<meta property="og:image:alt" content="Microsoft Logo" />
+
+	<meta name="twitter:card" content="summary" />
+
+	<meta name="twitter:site" content="@docsmsft" />
+
+	<meta name="color-scheme" content="light dark">
+
+
+	<meta name="archive_url" content="/previous-versions/visualstudio" />
+<meta name="audience" content="developer" />
+<meta name="author" content="anandmeg" />
+<meta name="bilingual_type" content="hover over" />
+<meta name="breadcrumb_path" content="/visualstudio/_breadcrumb/toc.json" />
+<meta name="depot_name" content="VS.docs" />
+<meta name="description" content="Saiba como criar aplicativos de console em C# do Visual Basic no Visual Studio, passo a passo." />
+<meta name="document_id" content="8067c580-66bc-f2a2-49c8-e9990547db48" />
+<meta name="document_version_independent_id" content="8067c580-66bc-f2a2-49c8-e9990547db48" />
+<meta name="gitcommit" content="https://github.com/MicrosoftDocs/visualstudio-docs-pr.pt-br/blob/b6820cda29300d95a119e0d33c11479dc3fa7f5b/docs/get-started/csharp/tutorial-console.md" />
+<meta name="locale" content="pt-br" />
+<meta name="manager" content="jmartens" />
+<meta name="monikers" content="vs-2017" />
+<meta name="monikers" content="vs-2019" />
+<meta name="monikers" content="vs-2022" />
+<meta name="ms.author" content="meghaanand" />
+<meta name="ms.contentlocale" content="pt-BR" />
+<meta name="ms.custom" content="vs-acquisition, get-started" />
+<meta name="ms.date" content="09/14/2021" />
+<meta name="ms.devlang" content="CSharp" />
+<meta name="ms.lasthandoff" content="03/10/2022" />
+<meta name="ms.locfileid" content="139704097" />
+<meta name="ms.openlocfilehash" content="4d5b8a70132e3ca13cded7b3f11c557566c0cd6b" />
+<meta name="ms.prod" content="visual-studio-windows" />
+<meta name="ms.sourcegitcommit" content="b0ec2d8b7e32a9a6b50e462d588c64d471665533" />
+<meta name="ms.technology" content="vs-ide-general" />
+<meta name="ms.topic" content="tutorial" />
+<meta name="ms.translationtype" content="MT" />
+<meta name="ms.workload" content="dotnet" />
+<meta name="ms.workload" content="dotnetcore" />
+<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/visualstudio-docs-pr.pt-br/blob/live/docs/get-started/csharp/tutorial-console.md" />
+<meta name="page_type" content="conceptual" />
+<meta name="pdf_url_template" content="https://docs.microsoft.com/pdfstore/pt-br/VS.docs/{branchName}{pdfName}" />
+<meta name="recommendations" content="true" />
+<meta name="schema" content="Conceptual" />
+<meta name="search.mshattr.devlang" content="csharp" />
+<meta name="site_name" content="Docs" />
+<meta name="toc_preview" content="true" />
+<meta name="toc_rel" content="toc.json" />
+<meta name="uhfHeaderId" content="MSDocsHeader-VisualStudio" />
+<meta name="updated_at" content="2022-03-10 03:52 AM" />
+<meta name="word_count" content="3750" />
+
+
+
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/4628cbd9-6f47-4ae1-b371-d34636609eaf" data-source="generated" />
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/bcbcbad5-4208-4783-8035-8481272c98b8" data-source="generated" />
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/75c493a7-abb6-4435-a651-8d9450a8ce66" data-source="generated" />
+
+	
+
+	<meta name="scope" content="VS IDE" />
+<link href="https://docs.microsoft.com/pt-br/visualstudio/get-started/csharp/tutorial-console" rel="canonical">
+	<title>Tutorial: Criar um aplicativo de console C# simples  - Visual Studio (Windows) | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/pt-br/_themes/styles/12508a22.site-ltr.css ">
+
+	
+
+	<script id="msdocs-script">
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'pt-br',
+			contentDir: 'ltr',
+			userLocale: 'pt-br',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/visualstudio-docs.pt-br/blob/live/docs/get-started/csharp/tutorial-console.md',
+			defaultDevLang: 'csharp',
+			extendBreadcrumb: true,
+			isEditDisplayable: false,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: true,
+			hasRecommendations: true,
+			contributors: [
+						{ name: "anandmeg", url: "https://github.com/anandmeg" },
+						{ name: "olprod", url: "https://github.com/olprod" }
+],
+		},
+		functions:{}
+	};
+	</script>
+	<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+	<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-3.min.js"></script>
+
+	<script src="/_themes/docs.theme/master/pt-br/_themes/global/67a45209.deprecation.js"></script>
+		<script src="/_themes/docs.theme/master/pt-br/_themes/scripts/fbe77f0a.index-docs.js"></script>
+</head>
+
+<body lang="pt-br" dir="ltr">
+	<div class="header-holder has-default-focus">
+		<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused position-fixed has-inner-focus focus-visible top-0 left-0 right-0 padding-xs has-text-centered has-body-background" tabindex="1">Avançar para o conteúdo principal</a>
+
+		<div hidden id="cookie-consent-holder"></div>
+
+		<div id="unsupported-browser" style="
+			background-color: white;
+			color: black;
+			padding: 16px;
+			border-bottom: 1px solid grey;"
+			hidden
+		>
+			<div style="max-width: 800px; margin: 0 auto;">
+				<p style="font-size: 24px">Não há mais suporte para esse navegador.</p>
+				<p style="font-size: 16px; margin-top: 16px;">Atualize o Microsoft Edge para aproveitar os recursos, o suporte técnico e as atualizações de segurança mais recentes.</p>
+				<div style="margin-top: 12px;">
+					<a href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+						style="
+						background-color: #0078d4;
+						border: 1px solid #0078d4;
+						color: white;
+						padding: 6px 12px;
+						border-radius: 2px;
+						display: inline-block;
+						">
+Baixar o Microsoft Edge					</a>
+					<a href="https://docs.microsoft.com/en-US/lifecycle/faq/internet-explorer-microsoft-edge"
+						style="
+							background-color: white;
+							padding: 6px 12px;
+							border: 1px solid #505050;
+							color: #171717;
+							border-radius: 2px;
+							display: inline-block;
+							">
+Mais informações					</a>
+				</div>
+			</div>
+
+		</div>
+		<!-- liquid-tag banners global -->
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div class="nav-bar border-top is-hidden-mobile"></div>
+</header>		</div>
+
+
+			<div id="content-header" class="content-header uhf-container has-padding has-default-focus border-bottom-none" data-bi-name="content-header">
+				<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+					<button type="button" class="contents-button button button-sm margin-right-xxs" data-bi-name="contents-expand" aria-haspopup="true" data-contents-button>
+						<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+						<span class="contents-expand-title">
+Sumário						</span>
+					</button>
+					<button type="button" class="ap-collapse-behavior ap-expanded button button-sm" data-bi-name="ap-collapse" aria-controls="action-panel">
+						<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+						<span>Sair do modo de foco</span>
+					</button>
+				</div>
+			</div>
+
+		<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus">
+			<!-- liquid-tag banners sectional -->
+		</div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="margin-top-sm-tablet position-fixed display-flex flex-direction-column" role="navigation" aria-label="Primário"></nav>
+			</div>
+
+			<!-- .primary-holder -->
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<!--div.columns -->
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+					<div id="main-column" class="column  is-full is-8-desktop">
+
+						<main id="main" role="main" data-bi-name="content" lang="pt-br" dir="ltr">
+							<!-- article-header -->
+							<div id="article-header" class="background-color-body margin-top-sm-tablet margin-bottom-xs" aria-label="content-header">
+								<div class="display-flex align-items-center ">
+									<details id="article-header-breadcrumbs-overflow-popover" class="popover" data-for="article-header-breadcrumbs">
+										<summary class="button button-clear button-primary button-sm">
+											<span class="icon">
+												<span class="docon docon-more"></span>
+											</span>
+										</summary>
+										<div id="article-header-breadcrumbs-overflow" class="popover-content padding-none">
+
+										</div>
+									</details>
+									<bread-crumbs id="article-header-breadcrumbs" class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop" id="page-breadcrumbs"></bread-crumbs>
+
+									<div id="article-header-page-actions"  class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch">
+
+										<a
+											id="lang-link-tablet"
+											class="button button-primary button-clear button-sm display-none display-inline-flex-tablet"
+											title="Ler em inglês" data-bi-name="language-toggle"
+											data-read-in-link
+											hidden>
+											<span class="icon margin-none" aria-hidden="true" data-read-in-link-icon>
+												<span class="docon docon-locale-globe"></span>
+											</span>
+											<span class="is-visually-hidden" data-read-in-link-text>Ler em inglês</span>
+										</a>
+
+											<button
+												type="button"
+												class="collection button button-clear button-sm button-primary display-none display-inline-flex-tablet"
+												data-list-type="collection"
+												data-bi-name="collection"
+												title="Adicionar à coleção">
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-circle-addition"></span>
+												</span>
+												<span class="collection-status is-visually-hidden">Salvar</span>
+											</button>
+										
+
+										
+
+										
+
+											<a	data-contenteditbtn
+												class="button button-clear button-sm text-decoration-none button-primary display-none display-inline-flex-tablet"
+												aria-label="Editar"
+												title="Editar Este Documento"
+												data-bi-name="edit"
+hidden														href="https://github.com/MicrosoftDocs/visualstudio-docs.pt-br/blob/live/docs/get-started/csharp/tutorial-console.md"
+														data-original_content_git_url="https://github.com/MicrosoftDocs/visualstudio-docs-pr.pt-br/blob/live/docs/get-started/csharp/tutorial-console.md"
+														data-original_content_git_url_template="{repo}/blob/{branch}/docs/get-started/csharp/tutorial-console.md"
+														data-pr_repo=""
+														data-pr_branch=""
+											>
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-edit-outline"></span>
+												</span>
+											</a>
+										
+
+
+										
+										<details class="popover popover-right" id="article-header-page-actions-overflow">
+											<summary class="justify-content-flex-start button button-clear button-sm button-primary" aria-label="Mais ações">
+												<span class="icon" aria-hidden="true">
+													<span class="docon docon-more-vertical"></span>
+												</span>
+											</summary>
+											<div class="popover-content padding-none">
+													<button
+														data-page-action-item="overflow-mobile"
+														type="button"
+														class="justify-content-flex-start button-block button-sm has-inner-focus button button-clear display-none-tablet"
+														aria-label="Sumário"
+														data-bi-name="contents-expand"
+														data-contents-button
+														data-popover-close>
+														<span class="icon">
+															<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+														</span>
+														<span class="contents-expand-title">Sumário</span>
+													</button>
+
+												<a
+													id="lang-link-overflow"
+													class="justify-content-flex-start button-sm has-inner-focus button button-clear button-block display-none-tablet"
+													title="Ler em inglês" data-bi-name="language-toggle"
+													data-page-action-item="overflow-mobile"
+													data-check-hidden="true"
+													data-read-in-link
+													hidden
+													>
+													<span class="icon" aria-hidden="true" data-read-in-link-icon>
+														<span class="docon docon-locale-globe"></span>
+													</span>
+													<span data-read-in-link-text>Ler em inglês</span>
+												</a>
+
+													<button
+														type="button"
+														class="collection justify-content-flex-start button button-clear button-sm has-inner-focus button-block display-none-tablet"
+														data-list-type="collection"
+														data-bi-name="collection"
+														title="Adicionar à coleção"
+														data-page-action-item="overflow-mobile"
+														data-check-hidden="true"
+														data-popover-close>
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-circle-addition"></span>
+														</span>
+														<span class="collection-status">Salvar</span>
+													</button>
+
+
+
+													<a	data-contenteditbtn
+														class="button button-clear button-block button-sm has-inner-focus justify-content-flex-start text-decoration-none display-none-tablet"
+														aria-label="Editar"
+														title="Editar Este Documento"
+														data-bi-name="edit"
+hidden																href="https://github.com/MicrosoftDocs/visualstudio-docs.pt-br/blob/live/docs/get-started/csharp/tutorial-console.md"
+																data-original_content_git_url="https://github.com/MicrosoftDocs/visualstudio-docs-pr.pt-br/blob/live/docs/get-started/csharp/tutorial-console.md"
+																data-original_content_git_url_template="{repo}/blob/{branch}/docs/get-started/csharp/tutorial-console.md"
+																data-pr_repo=""
+																data-pr_branch=""
+													>
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-edit-outline"></span>
+														</span>
+														<span>Editar</span>
+													</a>
+
+													<div aria-hidden="true" class="margin-none display-none-tablet border-top" data-page-action-item="overflow-all"></div>
+
+													
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-twitter" data-bi-name="twitter" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-twitter"></span>
+															</span>
+															<span>Twitter</span>
+														</a>
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-linkedin" data-bi-name="linkedin" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-linkedin"></span>
+															</span>
+															<span>LinkedIn</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-facebook" data-bi-name="facebook" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-facebook"></span>
+															</span>
+															<span>Facebook</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-email" data-bi-name="email" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-mail-message-fill"></span>
+															</span>
+															<span>Email</span>
+														</a>
+												
+											</div>
+										</details>
+										
+									</div>
+								</div>
+							</div>
+							<!-- end article-header -->
+
+
+							<div class="">
+								<button type="button" class="border contents-button button button-clear button-sm is-hidden-tablet has-inner-focus" aria-label="Sumário" data-bi-name="contents-expand" data-contents-button hidden>
+									<span class="icon">
+										<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+									</span>
+									<span class="contents-expand-title">Sumário</span>
+								</button>
+							</div>
+
+							<!-- end mobile-contents button  -->
+
+							<div class="content ">
+
+
+								<h1 id="tutorial-create-a-simple-c-console-app-in-visual-studio-part-1-of-2">Tutorial: Criar um aplicativo de console C# simples Visual Studio (parte 1 de 2)</h1>
+
+
+
+										<div class="display-flex-tablet justify-content-space-between-tablet page-metadata-container">
+
+											<ul class="metadata page-metadata" data-bi-name="page info" lang="pt-br" dir="ltr">
+														<li>
+Artigo														</li>
+														<li>
+															<time class="is-invisible" data-article-date aria-label="Data de revisão do artigo" datetime="2022-03-10T03:52:00Z" data-article-date-source="git">03/10/2022</time>
+														</li>
+																<li class="readingTime">9 minutos para o fim da leitura</li>
+														<li class="contributors-holder">
+															<button aria-label="Exibir todos os colaboradores" class="contributors-button link-button" data-bi-name="contributors" title="Exibir todos os colaboradores">
+																	2 colaboradores
+															</button>
+														</li>
+											</ul>
+												<div class="dropdown display-flex" data-hide-on-archived>
+													<button class="dropdown-trigger thumb-rating like link-button padding-xxs padding-right-none" data-binary-rating-response="rating-yes" title="Este artigo é útil" type="button" data-bi-name="rating-yes" data-bi-sat="1" aria-controls="is-this-helpful" aria-expanded="false" >
+														<span aria-hidden="true" class="icon docon docon-like"></span>
+													</button>
+													<button class="dropdown-trigger thumb-rating dislike link-button padding-xxs padding-right-none" data-binary-rating-response="rating-no" title="Este artigo não é útil" type="button" data-bi-name="rating-no" data-bi-sat="0" aria-controls="is-this-helpful" aria-expanded="false" >
+														<span aria-hidden="true" class="icon docon docon-dislike"></span>
+													</button>
+													<div class="dropdown-menu border-radius" id="is-this-helpful" role="menu">
+
+
+<div class="padding-xs" data-bi-name="rating" data-binary-rating-container>
+    <div class="binary-rating has-text-wrap" data-binary-rating-hide-on-submit>
+		<form class="feedback-verbatim-form width-250-tablet" data-feedback-verbatim-form id="main-page-rating-container">
+        	<div class="binary-rating-buttons">
+				<h3 id="binary-rating-heading" class="font-weight-semibold margin-top-none margin-bottom-xs font-size-h5 has-caret">Esta página é útil?</h3>
+				<div class="buttons">
+					<button class="thumb-rating like margin-right-xxs button button-clear button-sm"
+						data-binary-rating-response="rating-yes"
+						title="Yes"
+						type="button"
+						data-bi-name="rating-yes"
+						data-bi-sat="1">
+						<span aria-hidden="true" class="icon docon docon-like"></span>
+						<span>Yes</span>
+					</button>
+					<button class="thumb-rating dislike button button-clear button-sm"
+						data-binary-rating-response="rating-no"
+						title="No"
+						data-bi-name="rating-no"
+						type="button"
+						data-bi-sat="0">
+						<span aria-hidden="true" class="icon docon docon-dislike"></span>
+						<span>No</span>
+					</button>
+				</div>
+			</div>
+			<div id="binary-verbatim-container" class="font-size-xs margin-top-xs">
+				<div class="verbatim-textarea">
+					<label for="binary-rating-textarea" class="visually-hidden">
+Algum comentário adicional?					</label>
+					<textarea
+						id="binary-rating-textarea"
+						data-binary-rating-text rows="4"
+						maxlength="999"
+						placeholder="Algum comentário adicional?"
+						class="textarea has-inner-focus"></textarea>
+				</div>
+				<p class="has-line-height-reset">Os comentários serão enviados à Microsoft: quando você pressionar o botão Enviar, seus comentários serão usados para aprimorar os produtos e os serviços da Microsoft. <a href="https://privacy.microsoft.com/en-us/privacystatement">Política de Privacidade.</a></p>
+				<div class="buttons buttons-right margin-top-xs margin-right-xxs">
+					<button class="submit-rating button button-primary button-filled button-sm" data-bi-name="rating-verbatim" data-binary-rating-submit type="submit" disabled>Enviar</button>
+				</div>
+			</div>
+        </form>
+    </div>
+    <p
+		data-binary-rating-onsubmit-message="main-page-rating-container"
+		tabindex="-1"
+		class="margin-none inner-focus"
+		hidden>
+Obrigado.    </p>
+</div>
+													</div>
+												</div>
+											</div>
+
+
+											<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="Estrutura de tópicos do artigo">
+												<h3>Neste artigo</h3>
+											</nav>
+
+
+
+								<!-- <content> -->
+									<p>Neste tutorial, você usará o Visual Studio para criar e executar um aplicativo de console C# e explorar alguns recursos do IDE (ambiente de desenvolvimento integrado) do Visual Studio. Este tutorial é a parte 1 de uma série de tutoriais de duas partes.</p>
+<p>Neste tutorial, você:</p>
+<div class="checklist">
+<ul>
+<li>Crie um Visual Studio projeto.</li>
+<li>Crie um aplicativo de console C#.</li>
+<li>Depure o aplicativo.</li>
+<li>Feche seu aplicativo.</li>
+<li>Inspecione o código completo.</li>
+</ul>
+</div>
+<p><a href="tutorial-console-part-2?view=vs-2022" data-linktype="relative-path">Na parte 2</a>, você estende esse aplicativo para adicionar mais projetos, aprender truques de depuração e referenciar pacotes de terceiros.</p>
+<h2 id="prerequisites">Pré-requisitos</h2>
+<p>Você deve ter o Visual Studio instalado.</p>
+<div data-moniker="vs-2017">
+<p>Se você ainda não instalou o Visual Studio, acesse a página <a href="https://visualstudio.microsoft.com/vs/older-downloads/?utm_medium=microsoft&amp;utm_source=docs.microsoft.com&amp;utm_campaign=vs+2017+download" data-linktype="external">Visual Studio downloads</a> para instalá-lo gratuitamente.</p>
+</div>
+<div data-moniker="vs-2019 vs-2022">
+<p>Se você ainda não instalou o Visual Studio, acesse a página <a href="https://visualstudio.microsoft.com/downloads" data-linktype="external">Visual Studio downloads</a> para instalá-lo gratuitamente.</p>
+</div>
+<h2 id="create-a-project">Criar um projeto</h2>
+<p>Para começar, crie um projeto de aplicativo C#. O tipo de projeto vem com todos os arquivos de modelo necessários.</p>
+<div data-moniker="vs-2017">
+<ol>
+<li><p>Abra o Visual Studio 2017.</p>
+</li>
+<li><p>Na barra de menus superior, escolha <strong>ArquivoNovo</strong> &gt;  &gt;  <strong>Project</strong>.
+(Como alternativa, pressione <strong>Ctrl</strong>+ <strong>Shift</strong>+ <strong>N</strong>).</p>
+</li>
+<li><p>No painel esquerdo da caixa de diálogo <strong>Novo Projeto</strong>, expanda <strong>C#</strong> e, em seguida, escolha <strong>.NET Core</strong>. No painel central, escolha <strong>Aplicativo de Console (.NET Core)</strong>. Em seguida, nomeia o arquivo <strong><em>Calculadora</em></strong>.</p>
+<p><img src="media/new-project-csharp-calculator-console-app.png?view=vs-2022" alt="Captura de tela que mostra o modelo de projeto aplicativo de console (.NET Core) na caixa de diálogo Novo Project na caixa de diálogo Visual Studio IDE." data-linktype="relative-path"></p>
+</li>
+</ol>
+<h3 id="add-a-workload-optional">Adicionar uma carga de trabalho (opcional)</h3>
+<p>Se o modelo de projeto <strong>Aplicativo do Console (.NET Core)</strong> não for exibido, você poderá obtê-lo adicionando a carga de trabalho <strong>Desenvolvimento .NET Core de multiplataforma</strong>. Veja aqui como fazer isso.</p>
+<h4 id="option-1-use-the-new-project-dialog-box">Opção 1: usar a caixa de diálogo Novo Projeto</h4>
+<ol>
+<li><p>Selecione o link <strong>Abrir o Instalador do Visual Studio</strong> no painel esquerdo da caixa de diálogo <strong>Novo Projeto</strong>.</p>
+<p><img src="media/csharp-open-visual-studio-installer-generic-dark.png?view=vs-2022" alt="Captura de tela que mostra o link Escolher o Instalador do Visual Studio na caixa de diálogo Project novo." data-linktype="relative-path"></p>
+</li>
+<li><p>O Instalador do Visual Studio é iniciado. Escolha a carga de trabalho <strong>Desenvolvimento multiplaforma do .NET Core</strong> e, em seguida, selecione <strong>Modificar</strong>.</p>
+<p><img src="media/dot-net-core-xplat-dev-workload.png?view=vs-2022" alt="Captura de tela que mostra a carga de trabalho de desenvolvimento de plataforma cruzada do .NET Core no Instalador do Visual Studio." data-linktype="relative-path"></p>
+</li>
+</ol>
+<h4 id="option-2-use-the-tools-menu-bar">Opção 2: usar a barra de menus Ferramentas</h4>
+<ol>
+<li><p>Cancele a caixa <strong>de diálogo Novo Project</strong> e, na barra de menus superior, escolha <strong>Ferramentas</strong> &gt; <strong>Obter Ferramentas e Recursos</strong>.</p>
+</li>
+<li><p>O Instalador do Visual Studio é iniciado. Escolha a carga de trabalho <strong>Desenvolvimento multiplaforma do .NET Core</strong> e, em seguida, selecione <strong>Modificar</strong>.</p>
+</li>
+</ol>
+</div>
+<div data-moniker="vs-2019">
+<ol>
+<li><p>Abra o Visual Studio e escolha <strong>Criar um novo projeto</strong> na janela Iniciar.</p>
+<p><img src="../media/vs-2019/create-new-project-dark-theme.png?view=vs-2022" alt="Captura de tela que mostra a janela Criar um projeto." data-linktype="relative-path"></p>
+</li>
+<li><p>Na janela <strong>Criar um novo projeto</strong> , escolha <strong>C#</strong> na lista Idioma. Em seguida, <strong>Windows</strong> na lista Plataforma e <strong>Console</strong> na lista de tipos de projeto.</p>
+<p>Depois de aplicar os filtros de idioma, plataforma e tipo de projeto, escolha o <strong>modelo Aplicativo de Console</strong> e, em seguida, selecione <strong>Próximo</strong>.</p>
+<div class="NOTE">
+<p>Observação</p>
+<p>Se você não vir o modelo Aplicativo <strong>de Console</strong> , selecione <strong>Instalar mais ferramentas e recursos</strong>.</p>
+<p><img src="../media/vs-2019/not-finding-what-looking-for.png?view=vs-2022" alt="Captura de tela que mostra o link Instalar mais ferramentas e recursos." data-linktype="relative-path"></p>
+<p>Em seguida, no Instalador do Visual Studio, escolha a carga de trabalho de <strong>desenvolvimento multiplataforma do .NET Core</strong>.</p>
+<p><img src="media/dot-net-core-xplat-dev-workload.png?view=vs-2022" alt="Captura de tela mostrando a carga de trabalho de desenvolvimento de plataforma cruzada do .NET Core no Instalador do Visual Studio." data-linktype="relative-path"></p>
+<p>Depois disso, escolha o botão <strong>Modificar</strong> no Instalador do Visual Studio. Pode ser solicitado que você salve seu trabalho; nesse caso, faça isso. Em seguida, escolha <strong>Continuar</strong> para instalar a carga de trabalho. Em seguida, retorne para a etapa 2 deste procedimento para &quot;<a href="#create-a-project" data-linktype="self-bookmark">Criar um projeto</a>&quot;.</p>
+</div>
+</li>
+<li><p>Na janela <strong>Configurar seu novo projeto</strong>, digite ou insira <em>Calculadora</em> na caixa <strong>Nome do projeto</strong>. Em seguida, escolha <strong>Próximo</strong>.</p>
+<p><span class="mx-imgBorder">
+<img src="media/vs-2019/csharp-name-your-calculator-project.png?view=vs-2022" alt="Captura de tela que mostra o nome &amp;quot;Calculadora&amp;quot; do projeto na janela &amp;quot;Configurar seu novo projeto&amp;quot;." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p>Na janela <strong>Informações adicionais</strong> , <strong>o .NET Core 3.1</strong> já deve estar selecionado para sua estrutura de destino. Caso não, selecione <strong>.NET Core 3.1</strong>. Em seguida, escolha <strong>Criar</strong>.</p>
+<p><span class="mx-imgBorder">
+<img src="media/vs-2019/csharp-target-framework.png?view=vs-2022" alt="Captura de tela que mostra se o .NET Core 3.1 está selecionado na janela &amp;quot;Na janela &amp;quot;Informações adicionais&amp;quot;." data-linktype="relative-path">
+</span>
+</p>
+<p>O Visual Studio abre seu novo projeto, que inclui o código &quot;Olá, Mundo&quot; padrão.
+Para exibi-lo no editor, selecione o arquivo de código <em>Program.cs</em> na janela Gerenciador de Soluções, que normalmente está no lado direito do Visual Studio.</p>
+<p>O código &quot;Olá, Mundo&quot; padrão chama o método <a href="/pt-br/dotnet/api/system.console.writeline" class="no-loc" data-linktype="absolute-path">WriteLine</a> para exibir a cadeia de caracteres literal &quot;Olá, Mundo!&quot; na janela do console. Se você pressionar F5, poderá executar o programa padrão no modo de Depuração. Depois que o aplicativo é executado no depurador, a janela do console permanece aberta. Pressione qualquer tecla para fechar a janela do console.</p>
+</li>
+</ol>
+</div>
+<div data-moniker="vs-2022">
+<ol>
+<li><p>Abra o Visual Studio e escolha <strong>Criar um novo projeto</strong> na janela Iniciar.</p>
+<p><img src="media/vs-2022/create-new-project.png?view=vs-2022" alt="Captura de tela que mostra a janela Criar um projeto." data-linktype="relative-path"></p>
+</li>
+<li><p>Na janela <strong>Criar um novo projeto</strong> , selecione <strong>Todos os idiomas</strong> e, em seguida, <strong>escolha C#</strong> na lista suspenso. Escolha <strong>Windows</strong> na lista <strong>Todas as plataformas</strong> e escolha <strong>Console</strong> na <strong>lista Todos os tipos de</strong> projeto.</p>
+<p>Depois de aplicar os filtros de idioma, plataforma e tipo de projeto, escolha o modelo <strong>Aplicativo de Console</strong> e, em seguida, selecione <strong>Próximo</strong>.</p>
+<div class="NOTE">
+<p>Observação</p>
+<p>Se você não vir o modelo Aplicativo <strong>de Console</strong> , selecione <strong>Instalar mais ferramentas e recursos</strong>.</p>
+<p><img src="media/vs-2022/not-finding-what-looking-for.png?view=vs-2022" alt="Captura de tela que mostra o link Instalar mais ferramentas e recursos." data-linktype="relative-path"></p>
+<p>No Instalador do Visual Studio, escolha a carga de trabalho desenvolvimento <strong>da área de trabalho do .NET</strong> e, em seguida, selecione <strong>Modificar</strong>.</p>
+<p><img src="media/vs-2022/dot-net-development-workload.png?view=vs-2022" alt="Captura de tela mostrando a carga de trabalho de desenvolvimento da área de trabalho do .NET no Instalador do Visual Studio." data-linktype="relative-path"></p>
+</div>
+</li>
+<li><p>Na janela <strong>Configurar seu novo projeto</strong>, digite ou insira <em>Calculadora</em> na caixa <strong>Project nome</strong> e, em seguida, selecione <strong>Próximo</strong>.</p>
+<p><img src="media/vs-2022/csharp-name-your-calculator-project.png?view=vs-2022" alt="Captura de tela que mostra a nomeação da Calculadora do projeto na janela Configurar seu novo projeto." data-linktype="relative-path"></p>
+</li>
+<li><p>Na janela <strong>Informações adicionais</strong> , <strong>o .NET 6.0</strong> já deve estar selecionado para sua estrutura de destino. Selecione <strong>Criar</strong>.</p>
+<p><img src="media/vs-2022/csharp-target-framework.png?view=vs-2022" alt="Captura de tela que mostra o .NET 6.0 selecionado na janela Informações adicionais." data-linktype="relative-path"></p>
+<p>O Visual Studio abre seu novo projeto, que inclui o código &quot;Olá, Mundo&quot; padrão.</p>
+<p>Para exibi-lo no editor, selecione o arquivo de código <em>Program.cs</em> na janela Gerenciador de Soluções, que normalmente está no lado direito do Visual Studio.</p>
+<p>A instrução de código única chama o <a href="/pt-br/dotnet/api/system.console.writeline" class="no-loc" data-linktype="absolute-path">WriteLine</a> método para exibir a cadeia de caracteres literal &quot;Olá, Mundo!&quot; na janela do console. Se você pressionar F5, poderá executar o programa padrão no modo de Depuração. Depois que o aplicativo é executado no depurador, a janela do console permanece aberta. Pressione qualquer tecla para fechar a janela do console.</p>
+<div class="NOTE">
+<p>Observação</p>
+<p>A partir do .NET 6, novos projetos que usam o modelo de console geram código diferente das versões anteriores. Para saber mais, confira a <a href="/pt-br/dotnet/core/tutorials/top-level-templates" data-linktype="absolute-path">página Novos modelos C# para gerar instruções de nível</a> superior.</p>
+</div>
+</li>
+</ol>
+</div>
+<h2 id="create-the-app">Crie o aplicativo</h2>
+<p>Nesta seção, você:</p>
+<ul>
+<li>Explore alguns cálculos básicos de inteiros em C#.</li>
+<li>Adicione código para criar um aplicativo de calculadora básico.</li>
+<li>Depure o aplicativo para encontrar e corrigir erros.</li>
+<li>Refine o código para torná-lo mais eficiente.</li>
+</ul>
+<h3 id="explore-integer-math">Explorar a matemática de inteiros</h3>
+<p>Comece com alguns cálculos básicos de inteiros em C#.</p>
+<div data-moniker="vs-2017 vs-2019">
+<ol>
+<li><p>No editor de códigos, exclua o código padrão &quot;Olá, Mundo&quot;.</p>
+<p><img src="media/csharp-console-calculator-deletehelloworld.png?view=vs-2022" alt="Captura de tela que mostra a exclusão do código Olá, Mundo padrão do novo aplicativo de calculadora." data-linktype="relative-path"></p>
+<p>Especificamente, exclua a linha com o texto: <code>Console.WriteLine(&quot;Hello World!&quot;);</code>.</p>
+</li>
+<li><p>Em seu lugar, digite o seguinte código:</p>
+<pre><code class="lang-csharp">        int a = 42;
+        int b = 119;
+        int c = a + b;
+        Console.WriteLine(c);
+        Console.ReadKey();
+</code></pre>
+<p>Observe que quando você faz isso, o recurso IntelliSense no Visual Studio oferece a opção de preencher automaticamente a entrada.</p>
+<p><img src="media/integer-math-intellisense.gif?view=vs-2022" alt="animação de código de matemática de inteiro que mostra o recurso de preenchimento automático do IntelliSense no Visual Studio IDE." data-linktype="relative-path"></p>
+</li>
+<li><p>Escolha o botão <strong>início</strong> verde ao lado da <strong>calculadora</strong> para compilar e executar o programa ou pressione <strong>F5</strong>.</p>
+<p><img src="media/csharp-console-calculator-button.png?view=vs-2022" alt="Captura de tela que mostra a escolha do botão de calculadora para executar o aplicativo na barra de ferramentas." data-linktype="relative-path"></p>
+<p>Uma janela do console é aberta mostrando a soma de 42 + 119, que é <strong>161</strong>.</p>
+<p><img src="media/csharp-console-integer-math.png?view=vs-2022" alt="Captura de tela que mostra uma janela de console com os resultados de matemática de inteiro." data-linktype="relative-path"></p>
+</li>
+<li><p><strong>(Opcional)</strong> Você pode alterar o operador para alterar o resultado. Por exemplo, você pode alterar o operador <code>+</code> na linha de código <code>int c = a + b;</code> para <code>-</code> em uma subtração, <code>*</code> para multiplicação ou <code>/</code> para divisão. Em seguida, quando você executar o programa, o resultado também será alterado.</p>
+</li>
+<li><p>Feche a janela do console.</p>
+</li>
+</ol>
+</div>
+<div data-moniker="vs-2022">
+<ol>
+<li><p>No <strong>Gerenciador de soluções</strong>, no painel direito, selecione <strong>Program. cs</strong> para exibir o arquivo no editor de códigos</p>
+</li>
+<li><p>No editor de código, substitua o código padrão &quot;Olá, Mundo&quot; que diz <code>Console.WriteLine(&quot;Hello World!&quot;);</code> .</p>
+<p><img src="media/vs-2022/csharp-console-calculator-delete-hello-world.png?view=vs-2022" alt="Captura de tela que mostra a linha a ser substituída no arquivo de programa." data-linktype="relative-path"></p>
+<p>Substitua a linha pelo código a seguir:</p>
+<pre><code class="lang-csharp">    int a = 42;
+    int b = 119;
+    int c = a + b;
+    Console.WriteLine(c);
+    Console.ReadKey();
+</code></pre>
+<p>se você digitar o código, o Visual Studio recurso IntelliSense oferecerá a opção de completar o preenchimento automático da entrada.</p>
+<p><img src="media/vs-2022/integer-math-intellisense.gif?view=vs-2022" alt="animação de código de matemática de inteiro que mostra o recurso de preenchimento automático do IntelliSense no Visual Studio IDE." data-linktype="relative-path"></p>
+</li>
+<li><p>Para compilar e executar seu aplicativo, pressione <strong>F5</strong> ou selecione a seta verde ao lado da <strong>calculadora</strong> de nome na barra de ferramentas superior.</p>
+<p><img src="media/vs-2022/csharp-console-calculator-button.png?view=vs-2022" alt="Captura de tela que mostra a seleção do botão de calculadora para executar o aplicativo na barra de ferramentas Depurar." data-linktype="relative-path"></p>
+<p>Uma janela de console é aberta e mostra a soma de 42 + 119, que é <strong>161</strong>.</p>
+<p><img src="media/vs-2022/csharp-console-integer-math.png?view=vs-2022" alt="Captura de tela de uma janela de console mostrando os resultados de matemática de inteiro." data-linktype="relative-path"></p>
+</li>
+<li><p>Feche a janela do console.</p>
+</li>
+<li><p>Opcionalmente, você pode alterar o operador para alterar o resultado. Por exemplo, você pode alterar o operador <code>+</code> na linha de código <code>int c = a + b;</code> para <code>-</code> em uma subtração, <code>*</code> para multiplicação ou <code>/</code> para divisão. Quando você executa o aplicativo, o resultado é alterado de acordo.</p>
+</li>
+</ol>
+</div>
+<h3 id="add-code-to-create-a-calculator">Adicionar código para criar uma calculadora</h3>
+<p>Continue adicionando um conjunto mais complexo de código de calculadora ao seu projeto.</p>
+<div data-moniker="vs-2017 vs-2019">
+<ol>
+<li><p>No editor de código, substitua todo o código em <em>Program. cs</em> pelo novo código a seguir:</p>
+<pre><code class="lang-csharp">    using System;
+
+    namespace Calculator
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                // Declare variables and then initialize to zero.
+                int num1 = 0; int num2 = 0;
+
+                // Display title as the C# console calculator app.
+                Console.WriteLine(&quot;Console Calculator in C#\r&quot;);
+                Console.WriteLine(&quot;------------------------\n&quot;);
+
+                // Ask the user to type the first number.
+                Console.WriteLine(&quot;Type a number, and then press Enter&quot;);
+                num1 = Convert.ToInt32(Console.ReadLine());
+
+                // Ask the user to type the second number.
+                Console.WriteLine(&quot;Type another number, and then press Enter&quot;);
+                num2 = Convert.ToInt32(Console.ReadLine());
+
+                // Ask the user to choose an option.
+                Console.WriteLine(&quot;Choose an option from the following list:&quot;);
+                Console.WriteLine(&quot;\ta - Add&quot;);
+                Console.WriteLine(&quot;\ts - Subtract&quot;);
+                Console.WriteLine(&quot;\tm - Multiply&quot;);
+                Console.WriteLine(&quot;\td - Divide&quot;);
+                Console.Write(&quot;Your option? &quot;);
+
+                // Use a switch statement to do the math.
+                switch (Console.ReadLine())
+                {
+                    case &quot;a&quot;:
+                        Console.WriteLine($&quot;Your result: {num1} + {num2} = &quot; + (num1 + num2));
+                        break;
+                    case &quot;s&quot;:
+                        Console.WriteLine($&quot;Your result: {num1} - {num2} = &quot; + (num1 - num2));
+                        break;
+                    case &quot;m&quot;:
+                        Console.WriteLine($&quot;Your result: {num1} * {num2} = &quot; + (num1 * num2));
+                        break;
+                    case &quot;d&quot;:
+                        Console.WriteLine($&quot;Your result: {num1} / {num2} = &quot; + (num1 / num2));
+                        break;
+                }
+                // Wait for the user to respond before closing.
+                Console.Write(&quot;Press any key to close the Calculator console app...&quot;);
+                Console.ReadKey();
+            }
+        }
+    }
+</code></pre>
+</li>
+<li><p>Selecione o botão <strong>calculadora</strong> ou pressione <strong>F5</strong> para executar seu aplicativo.</p>
+<p>Uma janela do console é aberta.</p>
+</li>
+<li><p>Na janela do console, siga os prompts para adicionar os números <strong>42</strong> e <strong>119</strong> juntos.</p>
+<p>O aplicativo deverá ser semelhante à seguinte captura de tela:</p>
+<p><img src="media/csharp-console-calculator.png?view=vs-2022" alt="Captura de tela de uma janela de console mostrando o aplicativo de calculadora com prompts." data-linktype="relative-path"></p>
+</li>
+</ol>
+</div>
+<div data-moniker="vs-2022">
+<ol>
+<li><p>No editor de código, substitua todo o código em <em>Program. cs</em> pelo novo código a seguir:</p>
+<pre><code class="lang-csharp">    // Declare variables and then initialize to zero.
+    int num1 = 0; int num2 = 0;
+
+    // Display title as the C# console calculator app.
+    Console.WriteLine(&quot;Console Calculator in C#\r&quot;);
+    Console.WriteLine(&quot;------------------------\n&quot;);
+
+    // Ask the user to type the first number.
+    Console.WriteLine(&quot;Type a number, and then press Enter&quot;);
+    num1 = Convert.ToInt32(Console.ReadLine());
+
+    // Ask the user to type the second number.
+    Console.WriteLine(&quot;Type another number, and then press Enter&quot;);
+    num2 = Convert.ToInt32(Console.ReadLine());
+
+    // Ask the user to choose an option.
+    Console.WriteLine(&quot;Choose an option from the following list:&quot;);
+    Console.WriteLine(&quot;\ta - Add&quot;);
+    Console.WriteLine(&quot;\ts - Subtract&quot;);
+    Console.WriteLine(&quot;\tm - Multiply&quot;);
+    Console.WriteLine(&quot;\td - Divide&quot;);
+    Console.Write(&quot;Your option? &quot;);
+
+    // Use a switch statement to do the math.
+    switch (Console.ReadLine())
+    {
+        case &quot;a&quot;:
+            Console.WriteLine($&quot;Your result: {num1} + {num2} = &quot; + (num1 + num2));
+            break;
+        case &quot;s&quot;:
+            Console.WriteLine($&quot;Your result: {num1} - {num2} = &quot; + (num1 - num2));
+            break;
+        case &quot;m&quot;:
+            Console.WriteLine($&quot;Your result: {num1} * {num2} = &quot; + (num1 * num2));
+            break;
+        case &quot;d&quot;:
+            Console.WriteLine($&quot;Your result: {num1} / {num2} = &quot; + (num1 / num2));
+            break;
+    }
+    // Wait for the user to respond before closing.
+    Console.Write(&quot;Press any key to close the Calculator console app...&quot;);
+    Console.ReadKey();
+</code></pre>
+</li>
+<li><p>Selecione o botão <strong>calculadora</strong> ou pressione <strong>F5</strong> para executar seu aplicativo.</p>
+<p>Uma janela do console é aberta.</p>
+</li>
+<li><p>Na janela do console, siga os prompts para adicionar os números <strong>42</strong> e <strong>119</strong> juntos.</p>
+<p>O aplicativo deverá ser semelhante à seguinte captura de tela:</p>
+<p><img src="media/csharp-console-calculator.png?view=vs-2022" alt="Captura de tela de uma janela de console mostrando o aplicativo de calculadora com prompts." data-linktype="relative-path"></p>
+</li>
+</ol>
+</div>
+<h3 id="add-decimal-functionality">Adicionar funcionalidade decimal</h3>
+<p>Agora, ajuste o código para adicionar mais funcionalidade.</p>
+<p>O aplicativo de calculadora atual só aceita e retorna números inteiros. Por exemplo, se você executar o aplicativo e dividir o número 42 pelo número 119, o resultado será zero, o que não é exato.</p>
+<p><img src="media/csharp-console-calculator-nodecimal.png?view=vs-2022" alt="Captura de tela de uma janela de console que mostra o aplicativo de calculadora retornando um número inteiro inexato como resultado." data-linktype="relative-path"></p>
+<p>Para corrigir o código para melhorar a precisão manipulando decimais:</p>
+<ol>
+<li><p>em <em>program. cs</em> no editor de Visual Studio, pressione <strong>Ctrl</strong> + <strong>H</strong> para abrir o controle <strong>localizar e substituir</strong> .</p>
+</li>
+<li><p>Digite <em>int</em> no controle e digite <em>float</em> no campo <strong>substituir</strong> .</p>
+</li>
+<li><p>Selecione os ícones de <strong>caso de correspondência</strong> e <strong>corresponder a palavra inteira</strong> no controle ou pressione <strong>ALT</strong> + <strong>C</strong> e <strong>ALT</strong> + <strong>W</strong>.</p>
+</li>
+<li><p>Selecione o ícone <strong>substituir tudo</strong> ou pressione <strong>ALT</strong> + <strong>a para executar</strong> a pesquisa e substituir.</p>
+<p><img src="media/find-replace-control-animation.gif?view=vs-2022" alt="Animação do controle localizar e substituir mostrando como alterar a variável int para float." data-linktype="relative-path"></p>
+</li>
+<li><p>Execute o aplicativo de calculadora novamente e divida o número <strong>42</strong> pelo número <strong>119</strong>.</p>
+<p>O aplicativo agora retorna um número decimal em vez de zero.</p>
+<p><img src="media/csharp-console-calculator-decimal.png?view=vs-2022" alt="Captura de tela de uma janela de console mostrando o aplicativo de calculadora que agora retorna um numeral decimal como resultado." data-linktype="relative-path"></p>
+</li>
+</ol>
+<p>Agora o aplicativo pode produzir resultados decimais. Faça mais ajustes no código para que o aplicativo também possa calcular decimais.</p>
+<ol>
+<li><p>Use o controle <strong>Localizar e substituir</strong> para alterar cada instância da <code>float</code> variável para <code>double</code> e para alterar cada instância do <code>Convert.ToInt32</code> método para <code>Convert.ToDouble</code> .</p>
+</li>
+<li><p>Execute o aplicativo de calculadora e divida o número <strong>42,5</strong> pelo número <strong>119,75</strong>.</p>
+<p>O aplicativo agora aceita valores decimais e retorna um numeral decimal mais longo como seu resultado.</p>
+<p><img src="media/csharp-console-calculator-usedecimals.png?view=vs-2022" alt="Captura de tela de uma janela de console mostrando o aplicativo de calculadora que agora aceita números decimais e retorna um resultado decimal mais longo." data-linktype="relative-path"></p>
+<p>Na seção <a href="#revise-the-code" data-linktype="self-bookmark">revisar o código</a> , você reduz o número de casas decimais nos resultados.</p>
+</li>
+</ol>
+<h2 id="debug-the-app">Depurar o aplicativo</h2>
+<p>Você melhorou seu aplicativo de calculadora básica, mas seu aplicativo ainda não lida com exceções, como erros de entrada do usuário. Por exemplo, se os usuários tentarem dividir por zero ou inserir um caractere inesperado, o aplicativo poderá parar de funcionar, retornar um erro ou retornar um resultado não numérico inesperado.</p>
+<p>Vamos examinar alguns erros comuns de entrada do usuário, localizá-los no depurador se eles aparecerem e corrigi-los no código.</p>
+<div class="TIP">
+<p>Dica</p>
+<p>para obter mais informações sobre o depurador e como ele funciona, consulte <a href="../../debugger/debugger-feature-tour?view=vs-2022" data-linktype="relative-path">a primeira olhada no depurador de Visual Studio</a>.</p>
+</div>
+<h3 id="fix-the-divide-by-zero-error">Corrigir o erro de &quot;divisão por zero&quot;</h3>
+<p>Se você tentar dividir um número por zero, o aplicativo de console poderá congelar e, em seguida, mostrar o que há de errado no editor de códigos.</p>
+<p><img src="media/csharp-console-calculator-dividebyzero-error.png?view=vs-2022" alt="captura de tela do editor de código Visual Studio mostrando uma linha realçada em amarelo e um erro sem tratamento de exceção para ' tentativa de dividir por zero '." data-linktype="relative-path"></p>
+<div class="NOTE">
+<p>Observação</p>
+<p>Às vezes, o aplicativo não congela e o depurador não mostra um erro de divisão por zero. Em vez disso, o aplicativo pode retornar um resultado não numérico inesperado, como um símbolo de infinito. A correção de código a seguir ainda se aplica.</p>
+</div>
+<p>Para alterar o código para lidar com esse erro:</p>
+<ol>
+<li><p>Em <em>Program. cs</em>, substitua o código entre <code>case &quot;d&quot;:</code> e o comentário que diz <code>// Wait for the user to respond before closing</code> com o código a seguir:</p>
+<pre><code class="lang-csharp">         // Ask the user to enter a non-zero divisor until they do so.
+             while (num2 == 0)
+             {
+                 Console.WriteLine(&quot;Enter a non-zero divisor: &quot;);
+                 num2 = Convert.ToInt32(Console.ReadLine());
+             }
+             Console.WriteLine($&quot;Your result: {num1} / {num2} = &quot; + (num1 / num2));
+             break;
+     }
+</code></pre>
+<p>Depois de substituir o código, a seção com a <code>switch</code> instrução deve ser semelhante à captura de tela a seguir:</p>
+<p><img src="media/csharp-console-calculator-switch-code.png?view=vs-2022" alt="captura de tela mostrando a seção switch revisado no editor de código Visual Studio." data-linktype="relative-path"></p>
+</li>
+</ol>
+<p>Agora, quando você divide qualquer número por zero, o aplicativo solicita outro número e continua perguntando até que você forneça um número diferente de zero.</p>
+<p><img src="media/csharp-console-calculator-dividebyzero.png?view=vs-2022" alt="Captura de tela de uma janela de console com uma solicitação repetida para fornecer um número diferente de zero." data-linktype="relative-path"></p>
+<h3 id="fix-the-format-error">Corrigir o erro de &quot;formato&quot;</h3>
+<p>Se você inserir um caractere alfabético quando o aplicativo espera um caractere numérico, o aplicativo congela. Visual Studio mostra o que há de errado no editor de códigos.</p>
+<div data-moniker="vs-2017 vs-2019">
+<p><img src="media/csharp-console-calculator-format-error.png?view=vs-2022" alt="captura de tela mostrando um erro de formato sem tratamento no editor de código Visual Studio." data-linktype="relative-path"></p>
+</div>
+<div data-moniker="vs-2022">
+<p><img src="media/vs-2022/csharp-console-calculator-format-error.png?view=vs-2022" alt="captura de tela mostrando um erro de formato sem tratamento no editor de código Visual Studio." data-linktype="relative-path"></p>
+</div>
+<p>Para evitar essa exceção, você pode refatorar o código que você inseriu anteriormente.</p>
+<h4 id="revise-the-code">Revisar o código</h4>
+<p>Em vez de contar com a <code>program</code> classe para lidar com todo o código, você pode dividir seu aplicativo em duas classes: <code>Calculator</code> e <code>Program</code> .</p>
+<p>A <code>Calculator</code> classe manipula a massa do trabalho de cálculo e a <code>Program</code> classe manipula a interface do usuário e o trabalho de tratamento de erros.</p>
+<p>Vamos começar.</p>
+<ol>
+<li><p>Em <em>Program. cs</em>, exclua tudo no <code>Calculator</code> namespace entre suas chaves de abertura e fechamento:</p>
+<pre><code class="lang-csharp">using System;
+
+namespace Calculator
+{
+
+}
+</code></pre>
+</li>
+<li><p>Entre as chaves, adicione a seguinte nova <code>Calculator</code> classe:</p>
+<pre><code class="lang-csharp">class Calculator
+{
+    public static double DoOperation(double num1, double num2, string op)
+    {
+        double result = double.NaN; // Default value is &quot;not-a-number&quot; if an operation, such as division, could result in an error.
+
+        // Use a switch statement to do the math.
+        switch (op)
+        {
+            case &quot;a&quot;:
+                result = num1 + num2;
+                break;
+            case &quot;s&quot;:
+                result = num1 - num2;
+                break;
+            case &quot;m&quot;:
+                result = num1 * num2;
+                break;
+            case &quot;d&quot;:
+                // Ask the user to enter a non-zero divisor.
+                if (num2 != 0)
+                {
+                    result = num1 / num2;
+                }
+                break;
+            // Return text for an incorrect option entry.
+            default:
+                break;
+        }
+        return result;
+    }
+}
+
+</code></pre>
+</li>
+<li><p>Além disso, adicione uma nova  <code>Program</code> classe, da seguinte maneira:</p>
+<pre><code class="lang-csharp">class Program
+{
+    static void Main(string[] args)
+    {
+        bool endApp = false;
+        // Display title as the C# console calculator app.
+        Console.WriteLine(&quot;Console Calculator in C#\r&quot;);
+        Console.WriteLine(&quot;------------------------\n&quot;);
+
+        while (!endApp)
+        {
+            // Declare variables and set to empty.
+            string numInput1 = &quot;&quot;;
+            string numInput2 = &quot;&quot;;
+            double result = 0;
+
+            // Ask the user to type the first number.
+            Console.Write(&quot;Type a number, and then press Enter: &quot;);
+            numInput1 = Console.ReadLine();
+
+            double cleanNum1 = 0;
+            while (!double.TryParse(numInput1, out cleanNum1))
+            {
+                Console.Write(&quot;This is not valid input. Please enter an integer value: &quot;);
+                numInput1 = Console.ReadLine();
+            }
+
+            // Ask the user to type the second number.
+            Console.Write(&quot;Type another number, and then press Enter: &quot;);
+            numInput2 = Console.ReadLine();
+
+            double cleanNum2 = 0;
+            while (!double.TryParse(numInput2, out cleanNum2))
+            {
+                Console.Write(&quot;This is not valid input. Please enter an integer value: &quot;);
+                numInput2 = Console.ReadLine();
+            }
+
+            // Ask the user to choose an operator.
+            Console.WriteLine(&quot;Choose an operator from the following list:&quot;);
+            Console.WriteLine(&quot;\ta - Add&quot;);
+            Console.WriteLine(&quot;\ts - Subtract&quot;);
+            Console.WriteLine(&quot;\tm - Multiply&quot;);
+            Console.WriteLine(&quot;\td - Divide&quot;);
+            Console.Write(&quot;Your option? &quot;);
+
+            string op = Console.ReadLine();
+
+            try
+            {
+                result = Calculator.DoOperation(cleanNum1, cleanNum2, op);
+                if (double.IsNaN(result))
+                {
+                    Console.WriteLine(&quot;This operation will result in a mathematical error.\n&quot;);
+                }
+                else Console.WriteLine(&quot;Your result: {0:0.##}\n&quot;, result);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(&quot;Oh no! An exception occurred trying to do the math.\n - Details: &quot; + e.Message);
+            }
+
+            Console.WriteLine(&quot;------------------------\n&quot;);
+
+            // Wait for the user to respond before closing.
+            Console.Write(&quot;Press 'n' and Enter to close the app, or press any other key and Enter to continue: &quot;);
+            if (Console.ReadLine() == &quot;n&quot;) endApp = true;
+
+            Console.WriteLine(&quot;\n&quot;); // Friendly linespacing.
+        }
+        return;
+    }
+}
+</code></pre>
+</li>
+<li><p>Selecione o botão <strong>calculadora</strong> ou pressione <strong>F5</strong> para executar seu aplicativo.</p>
+</li>
+<li><p>Siga os prompts e divida o número <strong>42</strong> pelo número <strong>119</strong>. Os resultados devem ser semelhantes à captura de tela a seguir:</p>
+<div data-moniker="vs-2017 vs-2019">
+<p><img src="media/csharp-console-calculator-refactored.png?view=vs-2022" alt="Captura de tela mostrando uma janela de console com o aplicativo de calculadora refatorado." data-linktype="relative-path"></p>
+</div>
+<div data-moniker="vs-2022">
+<p><img src="media/vs-2022/csharp-console-calculator-refactored.png?view=vs-2022" alt="Captura de tela mostrando uma janela de console com o aplicativo de calculadora refatorado." data-linktype="relative-path"></p>
+</div>
+<p>Agora você pode inserir mais equações até escolher fechar o aplicativo de console. Também há menos casas decimais nos resultados. E se você inserir um caractere incorreto, obterá uma resposta de erro apropriada.</p>
+</li>
+</ol>
+<h2 id="close-the-app">Feche o aplicativo</h2>
+<ol>
+<li><p>Se você ainda não fez isso, feche o aplicativo de calculadora.</p>
+</li>
+<li><p>Feche o painel <strong>Saída</strong> no Visual Studio.</p>
+<p><img src="media/csharp-calculator-close-output-pane.png?view=vs-2022" alt="Captura de tela que mostra o fechamento do painel de saída no Visual Studio." data-linktype="relative-path"></p>
+</li>
+<li><p>em Visual Studio, pressione <strong>Ctrl</strong> + <strong>S</strong> para salvar seu aplicativo.</p>
+</li>
+</ol>
+<div data-moniker="vs-2019 vs-2022">
+<h2 id="add-git-source-control">Adicionar controle do código-fonte git</h2>
+<p>Agora que você criou um aplicativo, talvez queira adicioná-lo a um repositório git. Visual Studio torna esse processo fácil com as ferramentas do Git que você pode usar diretamente do IDE.</p>
+<div class="TIP">
+<p>Dica</p>
+<p>O Git é o sistema de controle de versão moderno mais amplamente usado, então se você for um desenvolvedor profissional ou estiver aprendendo a codificar, o Git pode ser muito útil. Se você for novo no git, o <a href="https://git-scm.com/" data-linktype="external">https://git-scm.com/</a> site será um bom lugar para começar. Lá, você pode encontrar folhas de consulta, um livro online popular e vídeos de informações básicas do git.</p>
+</div>
+<p>Para associar seu código ao git, comece criando um novo repositório git onde seu código está localizado:</p>
+<ol>
+<li><p>na barra de status no canto inferior direito da Visual Studio, selecione <strong>adicionar ao controle do código-fonte</strong> e, em seguida, selecione <strong>Git</strong>.</p>
+<p><span class="mx-imgBorder">
+<img src="../media/vs-2022/git-add-source-control.png?view=vs-2022" alt="Captura de tela dos botões de controle do código-fonte git abaixo do painel Gerenciador de Soluções, com o botão Adicionar ao controle do código-fonte realçado." data-linktype="relative-path">
+</span>
+</p>
+</li>
+<li><p>Na caixa de diálogo <strong>criar um repositório git</strong> , entre no github.</p>
+<p><span class="mx-imgBorder">
+<img src="../media/vs-2022/git-create-repo.png?view=vs-2022" alt="Captura de tela da janela de caixa de diálogo criar um repositório git onde você pode entrar no GitHub." data-linktype="relative-path">
+</span>
+</p>
+<p>O nome do repositório é preenchido automaticamente com base em seu local de pasta. O novo repositório é privado por padrão, o que significa que você é o único que pode acessá-lo.</p>
+<div class="TIP">
+<p>Dica</p>
+<p>Independentemente de seu repositório ser público ou privado, é melhor ter um backup remoto do código armazenado com segurança em GitHub. Mesmo que você não esteja trabalhando com uma equipe, um repositório remoto disponibiliza seu código para você em qualquer computador.</p>
+</div>
+</li>
+<li><p>Selecione <strong>Criar e Efetuar Push</strong>.</p>
+<p>Depois de criar seu repositório, você verá detalhes de status na barra de status.</p>
+<p><span class="mx-imgBorder">
+<img src="../media/vs-2022/git-new-private-repo-status-details.png?view=vs-2022" alt="Captura de tela da barra de status do repositório que está abaixo do painel de Gerenciador de Soluções no Visual Studio." data-linktype="relative-path">
+</span>
+</p>
+<p>O primeiro ícone com as setas mostra quantas confirmações de saída/entrada estão em seu Branch atual. Você pode usar esse ícone para efetuar pull de quaisquer confirmações de entrada ou enviar por push quaisquer confirmações de saída. Você também pode optar por exibir essas confirmações primeiro. Para fazer isso, selecione o ícone e, em seguida, selecione <strong>Exibir saída/entrada</strong>.</p>
+<p>O segundo ícone com o lápis mostra o número de alterações não confirmadas no seu código. Você pode selecionar esse ícone para exibir essas alterações na janela de <strong>alterações do git</strong> .</p>
+</li>
+</ol>
+<p>para saber mais sobre como usar o Git com seu aplicativo, consulte a <a href="../../version-control/?view=vs-2022" data-linktype="relative-path">documentação do controle de versão Visual Studio</a>.</p>
+</div>
+<h2 id="review-code-complete">Revisão: código concluído</h2>
+<p>Neste tutorial, você fez muitas alterações no aplicativo de calculadora. O aplicativo agora lida com os recursos de computação com mais eficiência e manipula a maioria dos erros de entrada do usuário.</p>
+<p>Este é o código completo, tudo em um só lugar:</p>
+<pre><code class="lang-csharp">
+using System;
+
+namespace Calculator
+{
+    class Calculator
+    {
+        public static double DoOperation(double num1, double num2, string op)
+        {
+            double result = double.NaN; // Default value is &quot;not-a-number&quot; which we use if an operation, such as division, could result in an error.
+
+            // Use a switch statement to do the math.
+            switch (op)
+            {
+                case &quot;a&quot;:
+                    result = num1 + num2;
+                    break;
+                case &quot;s&quot;:
+                    result = num1 - num2;
+                    break;
+                case &quot;m&quot;:
+                    result = num1 * num2;
+                    break;
+                case &quot;d&quot;:
+                    // Ask the user to enter a non-zero divisor.
+                    if (num2 != 0)
+                    {
+                        result = num1 / num2;
+                    }
+                    break;
+                // Return text for an incorrect option entry.
+                default:
+                    break;
+            }
+            return result;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool endApp = false;
+            // Display title as the C# console calculator app.
+            Console.WriteLine(&quot;Console Calculator in C#\r&quot;);
+            Console.WriteLine(&quot;------------------------\n&quot;);
+
+            while (!endApp)
+            {
+                // Declare variables and set to empty.
+                string numInput1 = &quot;&quot;;
+                string numInput2 = &quot;&quot;;
+                double result = 0;
+
+                // Ask the user to type the first number.
+                Console.Write(&quot;Type a number, and then press Enter: &quot;);
+                numInput1 = Console.ReadLine();
+
+                double cleanNum1 = 0;
+                while (!double.TryParse(numInput1, out cleanNum1))
+                {
+                    Console.Write(&quot;This is not valid input. Please enter an integer value: &quot;);
+                    numInput1 = Console.ReadLine();
+                }
+
+                // Ask the user to type the second number.
+                Console.Write(&quot;Type another number, and then press Enter: &quot;);
+                numInput2 = Console.ReadLine();
+
+                double cleanNum2 = 0;
+                while (!double.TryParse(numInput2, out cleanNum2))
+                {
+                    Console.Write(&quot;This is not valid input. Please enter an integer value: &quot;);
+                    numInput2 = Console.ReadLine();
+                }
+
+                // Ask the user to choose an operator.
+                Console.WriteLine(&quot;Choose an operator from the following list:&quot;);
+                Console.WriteLine(&quot;\ta - Add&quot;);
+                Console.WriteLine(&quot;\ts - Subtract&quot;);
+                Console.WriteLine(&quot;\tm - Multiply&quot;);
+                Console.WriteLine(&quot;\td - Divide&quot;);
+                Console.Write(&quot;Your option? &quot;);
+
+                string op = Console.ReadLine();
+
+                try
+                {
+                    result = Calculator.DoOperation(cleanNum1, cleanNum2, op);
+                    if (double.IsNaN(result))
+                    {
+                        Console.WriteLine(&quot;This operation will result in a mathematical error.\n&quot;);
+                    }
+                    else Console.WriteLine(&quot;Your result: {0:0.##}\n&quot;, result);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(&quot;Oh no! An exception occurred trying to do the math.\n - Details: &quot; + e.Message);
+                }
+
+                Console.WriteLine(&quot;------------------------\n&quot;);
+
+                // Wait for the user to respond before closing.
+                Console.Write(&quot;Press 'n' and Enter to close the app, or press any other key and Enter to continue: &quot;);
+                if (Console.ReadLine() == &quot;n&quot;) endApp = true;
+
+                Console.WriteLine(&quot;\n&quot;); // Friendly linespacing.
+            }
+            return;
+        }
+    }
+}
+
+</code></pre>
+<h2 id="next-steps">Próximas etapas</h2>
+<div data-moniker="vs-2017">
+<p>Continue com mais tutoriais:</p>
+<div class="nextstepaction">
+<p><a href="/pt-br/dotnet/csharp/tutorials" data-linktype="absolute-path">Tutoriais do C#</a></p>
+</div>
+<div class="nextstepaction">
+<p><a href="../visual-studio-ide?view=vs-2022" data-linktype="relative-path">Fazer um tour pelo IDE do Visual Studio</a></p>
+</div>
+</div>
+<div data-moniker="vs-2019 vs-2022">
+<p>Continue com a segunda parte deste tutorial:</p>
+<div class="nextstepaction">
+<p><a href="tutorial-console-part-2?view=vs-2022" data-linktype="relative-path">Parte 2 do tutorial: estender e depurar seu aplicativo de console em C#</a></p>
+</div>
+</div>
+
+							</div>
+							<!-- </content> -->
+
+						</main>
+
+
+
+
+						<!-- recommendations section -->
+							<section id="recommendations-section" data-bi-name="recommendations"></section>
+						<!-- end recommendations section -->
+
+							<section id="right-rail-learning-resources-mobile" class="display-none-desktop margin-top-xxs" data-bi-name="learning-resources-card" hidden></section>
+							<section id="right-rail-qna-mobile" class="display-none-desktop margin-top-xxs" data-bi-name="qna-link-card" hidden></section>
+
+						<!-- feedback section -->
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+							<section id="right-rail-events-mobile" class="display-none-desktop margin-top-xs" data-bi-name="events-card" hidden></section>
+
+						<div class="border-top is-visible-interactive has-default-focus margin-top-sm ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+	<div class="display-flex is-full-height padding-right-lg-desktop">
+			<a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a>
+		<div class="margin-inline-xs flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="Tema" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Tema</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector padding-xxs">
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon css-variable-support border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Claro					</span>
+				</button>
+			</li>
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Escuro					</span>
+				</button>
+			</li>
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Alto contraste					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/pt-br/previous-versions/" data-bi-name="archivelink">Documentos de versões anteriores</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/pt-br/teamblog" data-bi-name="bloglink">Blog</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/pt-br/contribute" data-bi-name="contributorGuide">Contribuir</a></li>
+					<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacidade e Cookies</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/pt-br/legal/termsofuse" data-bi-name="termsofuse">Termos de Uso</a></li>
+				<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Marcas Comerciais</a></li>
+		<li>&copy; Microsoft 2022</li>
+	</ul>
+</footer>
+						</div>
+
+					</div>
+
+						<div
+							class="font-size-sm right-container column is-4-desktop display-none display-block-desktop"
+							data-bi-name="pageactions"
+							role="complementary"
+							aria-label="Ações da página">
+
+							<div id="affixed-right-container" class="margin-top-sm-tablet doc-outline is-vertically-scrollable" data-bi-name="right-column">
+								<nav id="side-doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="Estrutura de tópicos do artigo">
+									<h3>Neste artigo</h3>
+								</nav>
+								<section id="right-rail-events" class="margin-top-xxs" data-bi-name="events-card" hidden></section>
+								<section id="right-rail-learning-resources" class="margin-top-xxs" data-bi-name="learning-resources-card" hidden></section>
+								<section id="right-rail-recommendations" data-bi-name="recommendations" class="margin-top-xxs" hidden></section>
+								<section id="right-rail-qna" class="margin-top-xxs" data-bi-name="qna-link-card" hidden></section>
+							</div>
+						</div>
+
+				</div>
+				<!--end of div.columns -->
+
+			</section>
+			<!--end of .primary-holder -->
+
+			<!-- interactive container -->
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+			<!-- end of interactive container -->
+		</div>
+
+	</div>
+	<!--end of .mainContainer -->
+
+	<section class="border-top has-default-focus is-hidden-interactive margin-top-sm ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+	<div class="display-flex is-full-height padding-right-lg-desktop">
+			<a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a>
+		<div class="margin-inline-xs flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="Tema" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Tema</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector padding-xxs">
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon css-variable-support border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Claro					</span>
+				</button>
+			</li>
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Escuro					</span>
+				</button>
+			</li>
+			<li class="theme display-block">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon css-variable-support display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+Alto contraste					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/pt-br/previous-versions/" data-bi-name="archivelink">Documentos de versões anteriores</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/pt-br/teamblog" data-bi-name="bloglink">Blog</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/pt-br/contribute" data-bi-name="contributorGuide">Contribuir</a></li>
+					<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacidade e Cookies</a></li>
+				<li><a data-mscc-ic="false" href="https://docs.microsoft.com/pt-br/legal/termsofuse" data-bi-name="termsofuse">Termos de Uso</a></li>
+				<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Marcas Comerciais</a></li>
+		<li>&copy; Microsoft 2022</li>
+	</ul>
+</footer>
+	</section>
+
+	<div id="action-panel" role="region" aria-label="Painel de ação" class="action-panel has-default-focus" tabindex="-1"></div>
+</body>
+</html>
